@@ -28,7 +28,7 @@ void CuentaCorriente::consultarCuenta(){
     cout << "Apellidos: " << apellidos << endl;
     cout << "Direccion: " << direccion << endl;
     cout << "Telefono: " << telefono << endl;
-    cout << "Saldo: " << saldo << endl;
+    cout << "Saldo: " << int(saldo) << endl;
 }
 
 bool CuentaCorriente::saldoNegativo() {
