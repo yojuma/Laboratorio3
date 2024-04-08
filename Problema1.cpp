@@ -96,7 +96,6 @@ int problema1(){
             break;
         case 5:
             delete cuenta;
-            cout<<"Cuenta eliminada"<<endl;
             return 0;
         default:
             cout<<"Opcion no valida"<<endl;
