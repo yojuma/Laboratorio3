@@ -15,6 +15,9 @@ void Problema_2::leerArchivo(string ubicacion){
         }
         file.close();
     }
+    else{
+        cout<<"Error: El sistema no pudo encontrar el archivo especificado"<<endl;
+    }
 
 }
 
@@ -23,13 +26,18 @@ void Problema_2::escribirArchivo(string ubicacion){
     string seguir="y";
     ofstream file;
     file.open(ubicacion);
-    while(seguir=="y"||seguir=="Y"){
-        cout<<"Ingrese el texto que quiere anadir al documento: ";
-        cin>>linea;
-        file<<linea<<"\n";
-        file<<"\n";
-        cout<<"desea escribir algo mas en el documento?(y/n): ";
-        cin>>seguir;
+    if(file.is_open()){
+        while(seguir=="y"||seguir=="Y"){
+            cout<<"Ingrese el texto que quiere anadir al documento: ";
+            cin>>linea;
+            file<<linea<<"\n";
+            file<<"\n";
+            cout<<"desea escribir algo mas en el documento?(y/n): ";
+            cin>>seguir;
+        }
+    }
+    else{
+        cout<<"Error: El sistema no pudo encontrar el archivo especificado"<<endl;
     }
     file.close();
 }
