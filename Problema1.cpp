@@ -54,6 +54,7 @@ int problema1(){
             cout << "2. Apellidos" << endl;
             cout << "3. Direccion" << endl;
             cout << "4. Telefono" << endl;
+            cout << "Seleccione una opcion: ";
             cin >> dato;
             cout << "Ingrese el nuevo valor: ";
             cin >> nuevo_valor;
