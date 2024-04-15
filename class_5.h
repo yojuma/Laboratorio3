@@ -39,10 +39,10 @@ public:
     string getGenero();
     Duracion getDuracion();
     void imprimir();
-    void setNombre(const std::string& nuevoNombre);
-    void setArtista(const std::string& nuevoArtista);
+    void setNombre(const string& nuevoNombre);
+    void setArtista(const string& nuevoArtista);
     void setAnoLanzamiento(int nuevoAnoLanzamiento);
-    void setGenero(const std::string& nuevoGenero);
+    void setGenero(const string& nuevoGenero);
     void setDuracion(const Duracion& nuevaDuracion);
     ~Cancion(){
         //destructor por defecto
