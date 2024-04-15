@@ -13,6 +13,7 @@ SOURCES += \
         class_2.cpp \
         class_3.cpp \
         class_4.cpp \
+        class_5.cpp \
         main.cpp
 
 HEADERS += \
@@ -20,4 +21,5 @@ HEADERS += \
     class_2.h \
     class_3.h \
     class_4.h \
+    class_5.h \
     problemas.h
