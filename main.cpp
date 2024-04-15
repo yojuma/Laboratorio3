@@ -29,7 +29,7 @@ int main(){
             problema4();
             break;
         case 5:
-            //problema5();
+            problema5();
             break;
         default:
             cout<<"Opcion no valida"<<endl;
