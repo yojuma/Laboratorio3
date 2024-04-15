@@ -197,20 +197,20 @@ void Problema_5::guardarLista(const string& nombreArchivo)const{
 
 void Problema_5::cargarLista(const string& nombreArchivo){
     ifstream archivo(nombreArchivo);
-    if (archivo.is_open()) {
+    if(archivo.is_open()){
         string linea;
         string nombre, artista, genero;
         int ano, minutos, segundos;
-        while (getline(archivo, linea)) {
-            if (linea.find("Nombre: ") != string::npos) {
-                nombre = linea.substr(8);
-            } else if (linea.find("Artista: ") != string::npos) {
+        while(getline(archivo, linea)){
+            if(linea.find("Nombre: ") != string::npos){
+                nombre = linea.substr(8);                               //substr para ignorar las (n) posiciones principales de la linea
+            } else if(linea.find("Artista: ") != string::npos){
                 artista = linea.substr(9);
-            } else if (linea.find("Ano de lanzamiento: ") != string::npos) {
+            } else if(linea.find("Ano de lanzamiento: ") != string::npos){
                 ano = stoi(linea.substr(21));
-            } else if (linea.find("Genero: ") != string::npos) {
+            } else if(linea.find("Genero: ") != string::npos){        //find para encontrar en la linea cierto caracter o cadena
                 genero = linea.substr(8);
-            } else if (linea.find("Duracion: ") != string::npos) {
+            } else if(linea.find("Duracion: ") != string::npos){
                 minutos = stoi(linea.substr(10, 2));
                 segundos = stoi(linea.substr(13));
                 // Creamos la Cancion y la agregamos a la playlist
